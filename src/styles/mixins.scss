@@ -1,0 +1,5 @@
+@mixin Title($fgeneral) {
+    font-size: $fgeneral;
+    font-weight: 700;
+    line-height: $fgeneral;
+}

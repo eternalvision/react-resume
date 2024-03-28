@@ -1,0 +1,40 @@
+:root {
+    --l-bgc-body: #fff;
+    --l-bgc-block: #ebebeb;
+    --l-c-text: #000;
+    --l-bgc-title: #000;
+    --l-c-selection: #fff;
+    --l-bgc-selection: #000;
+    --l-bgc-scrollbar: #b4b4b4;
+
+    --d-bgc-body: #000;
+    --d-bgc-block: #141414;
+    --d-c-text: #fff;
+    --d-bgc-title: #fff;
+    --d-c-selection: #000;
+    --d-bgc-selection: #fff;
+    --d-bgc-scrollbar: #4b4b4b;
+
+    --fs: 25px;
+    --br-b: 45px;
+}
+
+body.light {
+    --bgc-body: var(--l-bgc-body);
+    --bgc-block: var(--l-bgc-block);
+    --c-text: var(--l-c-text);
+    --bgc-title: var(--l-bgc-title);
+    --c-selection: var(--l-c-selection);
+    --bgc-selection: var(--l-bgc-selection);
+    --bgc-scrollbar: var(--l-bgc-scrollbar);
+}
+
+body.dark {
+    --bgc-body: var(--d-bgc-body);
+    --bgc-block: var(--d-bgc-block);
+    --c-text: var(--d-c-text);
+    --bgc-title: var(--d-bgc-title);
+    --c-selection: var(--d-c-selection);
+    --bgc-selection: var(--d-bgc-selection);
+    --bgc-scrollbar: var(--d-bgc-scrollbar);
+}

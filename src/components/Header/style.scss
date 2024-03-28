@@ -1,0 +1,34 @@
+.Logo {
+    @include Title(35px);
+    color: var(--c-text);
+}
+
+.Header {
+    user-select: none;
+    // background-color: var(--c-text);
+    // background-color: var(--bgc-block);
+    backdrop-filter: blur(30px);
+    border-radius: 0px 0px var(--br-b) var(--br-b);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.HeaderList {
+    display: flex;
+    align-items: center;
+    padding: 0px 30px;
+    height: 80px;
+    justify-content: space-between;
+}
+// 222222
+
+.InterfaceSettings {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}

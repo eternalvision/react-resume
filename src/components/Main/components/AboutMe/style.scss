@@ -1,0 +1,71 @@
+.MyImage {
+    object-fit: cover;
+    max-width: 100%;
+    transform: scale(1.5) translateY(20px);
+}
+
+.AboutMe {
+    color: var(--c-text);
+}
+
+.AboutMeList {
+    display: flex;
+    gap: 80px;
+}
+
+.ContactInfoList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ContactInfoListItem {
+    &:first-child {
+        overflow: hidden;
+        max-width: 200px;
+    }
+
+    &:last-child {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 320px;
+        ul {
+            display: flex;
+            flex-direction: column;
+            font-size: var(--fs);
+        }
+    }
+}
+
+.Specialty {
+    @include Title(35px);
+}
+
+.PersonalInfoBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    ul {
+        li {
+            &:first-child {
+                @include Title(30px);
+            }
+        }
+    }
+}
+
+.Name {
+    @include Title(120px);
+    line-height: 100px;
+}
+
+.PersonalList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ProfileTitle {
+    font-size: var(--fs);
+}

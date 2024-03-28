@@ -1,0 +1,28 @@
+.LanguageList {
+    display: flex;
+    color: var(--c-text);
+
+    align-items: center;
+    font-size: var(--fs);
+    // padding: 5px 10px;
+    li {
+        padding: 5px 10px;
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--bgc-block);
+        &:first-child {
+            border-radius: var(--br-b) 0px 0px var(--br-b);
+        }
+        &:last-child {
+            border-radius: 0px var(--br-b) var(--br-b) 0px;
+        }
+    }
+
+    .ActiveLanguage {
+        color: var(--bgc-body);
+        background-color: var(--c-text);
+    }
+}

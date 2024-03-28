@@ -1,0 +1,12 @@
+.InfoComponentList {
+    padding: 25px 30px;
+    border-radius: 45px;
+    background-color: var(--bgc-block);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.InfoComponentListTitle {
+    @include Title(60px);
+}
