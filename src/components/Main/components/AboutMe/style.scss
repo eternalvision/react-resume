@@ -16,7 +16,7 @@
 .ContactInfoList {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
 .ContactInfoListItem {
@@ -45,7 +45,7 @@
 .PersonalInfoBlock {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
     ul {
         li {
             &:first-child {
@@ -56,7 +56,7 @@
 }
 
 .Name {
-    @include Title(120px);
+    @include Title(130px);
     line-height: 100px;
 }
 

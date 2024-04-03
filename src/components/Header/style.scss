@@ -5,9 +5,9 @@
 
 .Header {
     user-select: none;
-    // background-color: var(--c-text);
-    // background-color: var(--bgc-block);
-    backdrop-filter: blur(30px);
+    background-image: radial-gradient(transparent 1px, var(--bgc-body) 1px);
+    background-size: 4px 4px;
+    backdrop-filter: blur(3px);
     border-radius: 0px 0px var(--br-b) var(--br-b);
     position: fixed;
     top: 0;
@@ -25,10 +25,9 @@
     height: 80px;
     justify-content: space-between;
 }
-// 222222
 
 .InterfaceSettings {
     display: flex;
-    gap: 30px;
+    gap: 35px;
     align-items: center;
 }

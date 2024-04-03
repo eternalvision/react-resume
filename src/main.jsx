@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { App } from "./App.jsx";
+import { Data } from "./data";
 
 import {
     DarkModeProvider,
@@ -17,9 +18,13 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <DarkModeProvider Hooks={Hooks}>
             <LanguageProvider Hooks={Hooks}>
                 <App
-                    Context={{ DarkModeContext, LanguageContext }}
+                    Context={{
+                        DarkModeContext,
+                        LanguageContext,
+                    }}
                     Hooks={Hooks}
                     UI={UI}
+                    Data={Data}
                 />
             </LanguageProvider>
         </DarkModeProvider>

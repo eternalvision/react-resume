@@ -7,6 +7,8 @@
     --l-bgc-selection: #000;
     --l-bgc-scrollbar: #b4b4b4;
 
+    --l-cursor: rgb(235, 235, 235);
+
     --d-bgc-body: #000;
     --d-bgc-block: #141414;
     --d-c-text: #fff;
@@ -14,6 +16,8 @@
     --d-c-selection: #000;
     --d-bgc-selection: #fff;
     --d-bgc-scrollbar: #4b4b4b;
+
+    --d-cursor: rgb(20, 20, 20);
 
     --fs: 25px;
     --br-b: 45px;
@@ -27,6 +31,7 @@ body.light {
     --c-selection: var(--l-c-selection);
     --bgc-selection: var(--l-bgc-selection);
     --bgc-scrollbar: var(--l-bgc-scrollbar);
+    --cursor: var(--l-cursor);
 }
 
 body.dark {
@@ -37,4 +42,5 @@ body.dark {
     --c-selection: var(--d-c-selection);
     --bgc-selection: var(--d-bgc-selection);
     --bgc-scrollbar: var(--d-bgc-scrollbar);
+    --cursor: var(--d-cursor);
 }
