@@ -1,9 +1,8 @@
 import { AboutMe } from "./components";
-import { AnimatePresence } from "framer-motion";
 
 import "./style.scss";
 
-export const Main = ({ UI, Hooks }) => {
+export const Main = ({ Data, Context, UI, Hooks }) => {
     const { InfoComponent, AnimationWrapper } = UI;
     const { useIntersectionObserver } = Hooks;
 
@@ -13,16 +12,18 @@ export const Main = ({ UI, Hooks }) => {
             componentType="Main"
             mode="observer"
             className="Main">
-            <AnimatePresence>
-                <AnimationWrapper
-                    useIntersectionObserver={useIntersectionObserver}
-                    componentType="AboutMe"
-                    mode="observer"
-                    className="AboutMe">
-                    <AboutMe InfoComponent={InfoComponent} />
-                </AnimationWrapper>
-                <div className="Dash"></div>
-            </AnimatePresence>
+            <AnimationWrapper
+                useIntersectionObserver={useIntersectionObserver}
+                componentType="AboutMe"
+                mode="observer"
+                className="AboutMe">
+                <AboutMe
+                    AboutMeData={Data.AboutMe}
+                    Context={Context}
+                    InfoComponent={InfoComponent}
+                />
+            </AnimationWrapper>
+            <div className="Dash"></div>
         </AnimationWrapper>
     );
 };

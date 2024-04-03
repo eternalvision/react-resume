@@ -4,15 +4,14 @@ import { useContext } from "react";
 export const CustomCursor = ({ ThemeMode }) => {
     const { theme } = useContext(ThemeMode);
 
-    const cursorColor = theme === "dark" ? "rgb(0,0,0)" : "rgb(255,255,255)";
     const outerStyle =
         theme === "dark"
-            ? { borderColor: "black", mixBlendMode: "exclusion" }
-            : { borderColor: "white", mixBlendMode: "exclusion" };
+            ? { borderColor: "white", mixBlendMode: "difference" }
+            : { borderColor: "white", mixBlendMode: "difference" };
 
     return (
         <AnimatedCursor
-            color={cursorColor}
+            color={"255,255,255"}
             hasBlendMode={true}
             innerSize={8}
             innerScale={1}

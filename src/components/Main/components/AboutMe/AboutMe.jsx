@@ -1,6 +1,17 @@
+import { useContext } from "react";
 import "./style.scss";
 
-export const AboutMe = ({ InfoComponent }) => {
+export const AboutMe = ({ InfoComponent, AboutMeData, Context }) => {
+    const { selectedLang } = useContext(Context.LanguageContext);
+    const {
+        firstName,
+        secondName,
+        profession,
+        placeOfBirth,
+        title,
+        profileTitle,
+    } = AboutMeData()[selectedLang];
+
     return (
         <ul className="AboutMeList">
             <li className="AboutMeListItem">
@@ -9,15 +20,13 @@ export const AboutMe = ({ InfoComponent }) => {
                         <img
                             className="MyImage"
                             src="/Me.jpg"
-                            alt="Sasha Priadchenko"
+                            alt={`${firstName} ${secondName}`}
                         />
                     </li>
                     <li className="ContactInfoListItem">
                         <section className="MainInfoBlock">
                             <ul className="MainInfo">
-                                <li className="Specialty">
-                                    Full Stack Web Developer
-                                </li>
+                                <li className="Specialty">{profession}</li>
                                 <li>al.pryadchenko@gmail.com</li>
                                 <li>+420607443987</li>
                                 <li>Zinkovska 1852/2 Prague, 10000, Czech</li>
@@ -25,15 +34,15 @@ export const AboutMe = ({ InfoComponent }) => {
                         </section>
                         <section className="PersonalInfoBlock">
                             <ul>
-                                <li>Date / Place of birth</li>
-                                <li>29.05.2001 / Slavyansk</li>
+                                <li>{title.date_place}</li>
+                                <li>29.05.2001 / {placeOfBirth}</li>
                             </ul>
                             <ul>
-                                <li>Driving Licensy</li>
+                                <li>{title.driving}</li>
                                 <li>B</li>
                             </ul>
                             <ul>
-                                <li>Nationality</li>
+                                <li>{title.nationality}</li>
                                 <li>Ukrainian</li>
                             </ul>
                         </section>
@@ -44,25 +53,12 @@ export const AboutMe = ({ InfoComponent }) => {
                 <ul className="PersonalList">
                     <li className="Name">
                         <h1>
-                            Sasha <br /> Priadchenko
+                            {firstName} <br /> {secondName}
                         </h1>
                     </li>
                     <li>
-                        <InfoComponent titleText={"Profile"}>
-                            <p className="ProfileTitle">
-                                Full-stack web developer with 4 years of
-                                experience in building and maintaining
-                                responsive websites in the recruiting industry.
-                                Proficient in HTML, CSS, JavaScript; plus modern
-                                libraries and frameworks like React and Node.js.
-                                Passionate about implementing and launching new
-                                projects. Ability to translate business
-                                requirements into technical solutions. Looking
-                                to apply my degree in Automation of Production
-                                Processes and extensive experience in full-stack
-                                development to grow in a challenging
-                                environment.
-                            </p>
+                        <InfoComponent titleText={title.profile}>
+                            <p className="ProfileTitle">{profileTitle}</p>
                         </InfoComponent>
                     </li>
                 </ul>

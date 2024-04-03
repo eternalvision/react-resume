@@ -14,7 +14,12 @@ export const App = ({ Context, Hooks, UI, Data }) => {
                 <img className="PositionImg" src="/resume.jpg" alt="" />
                 <section className="PositionBlock">
                     <AnimatePresence>
-                        <Main Context={Context} UI={UI} Hooks={Hooks} />
+                        <Main
+                            Data={Data}
+                            Context={Context}
+                            UI={UI}
+                            Hooks={Hooks}
+                        />
                     </AnimatePresence>
                     <Footer />
                 </section>
